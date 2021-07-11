@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Raleway:wght@100;200;300&family=Source+Sans+Pro:wght@200;300&display=swap');
+
+:root{
+    --white: #f3f3f3;
+    --black: #000000;
+    --b_alpha: rgba(0,0,0,0.7);
+    --li: #ffb199;
+    --lred: rgba(255,8,68,1);
+    --pur:rgba(51, 8, 103,0.7);
+    --lit:rgba(99, 234, 235);
+    --lit1:rgb(60, 182, 182);
+    --g:#b8fd00;
+    --amber:rgb(255, 126, 0);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body{
+    margin:0;
+}
+
+body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.nav{
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.40), 0 17px 50px 0 rgba(0,0,0,0.30);
+}
+
+.center{
+    display: flex;
+    height: 50px;
+    width: 30%;
+    margin: auto;
+    justify-content: center;
+}
+
+.logo{
+    width: 80px;
+}
+
+.logotext{
+    font-family: 'Raleway', sans-serif;
+    font-size:50px;
+    font-weight: 300;
+    margin-top:12px;
+}
+
+.first_section{
+    background-color:var(--pur);
+    width:900px;
+    height: 280px;
+    margin:auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.40), 0 17px 50px 0 rgba(0,0,0,0.30);
+}
+
+.note{
+    width: 800px;
+    height:80px;
+    margin: auto;
+    padding: 2px;
+    border-radius: 13px;
+}
+
+.ttl{
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    background: var(--lit);
+}
+
+.ttl::placeholder{
+    color: var(--black);
+}
+
+.red{
+    background: var(--lred);
+}
+
+.amber{
+    background:var(--amber);
+}
+
+.green{
+    background:var(--g);
+}
+
+.ttl:focus{
+    outline: 0;
+    border: none;
+}
+
+.fwrapper{
+    margin: auto;
+    margin-top: 5px;
+    width: 60%;
+    text-align: center;
+    padding: 5px;
+}
+
+.pr{
+    font-size: 30px;
+    color:var(--lit);
+}
+
+.form-control {
+    margin: auto;
+    text-align-last: center;
+    display: block;
+    cursor: pointer;
+    width: 60%;
+    height: 40px;
+    padding: 6px 12px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: var(--lit);
+    background-clip: padding-box;
+    border: 1px solid var(--lit);
+    border-radius: 5px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--lit);
+    outline: 0;
+    box-shadow: 0 0 0 3px var(--lit);
+}
+
+.s-button {
+    display: block;
+    width: 40%;
+    padding: 12px;
+    background: var(--lit);
+    color: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin:10px auto;
+    font-weight: 700;
+    border: 2px solid var(--lit);
+    transition: all 0.3s ease;
+}
+
+.s-button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.40), 0 17px 50px 0 rgba(0,0,0,0.30);
+}
+
+.display{
+    background-color:var(--pur);
+    overflow: hidden;
+    width:900px;
+    min-height: 200px;
+    margin:auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.40), 0 17px 50px 0 rgba(0,0,0,0.30);
+}
+
+.btn-tab{
+    width: 800px;
+    height:45px;
+    margin: auto;
+    display: flex;
+}
+
+.intrad{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.intlbl{
+    display: block;
+    background-color: var(--lit1);
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight:700;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    text-align: center;
+    margin:0 2px;
+    transition: all 0.3s ease;
+}
+
+.intrad:checked + .intlbl{
+    background-color: var(--lit);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.40), 0 17px 50px 0 rgba(0,0,0,0.30);
+}
+
+.intlbl:hover{
+    background-color: var(--lit);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.40), 0 17px 50px 0 rgba(0,0,0,0.30);
+}
+
+.display-task{
+    width: 800px;
+    overflow: hidden;
+    min-height:100px;
+    margin:10px auto;
+}
+
+.tsk{
+    width: 100%;
+    height: 70px;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 5px auto;
+}
+
+.hi{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: none;
+}
+
+.hii{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+.completed{
+    background-color: rgba(68, 77, 59,0.5);
+}
+.disabled{
+    pointer-events:none;
+    text-decoration: line-through;
+}
+.complete{
+    width: 70px;
+    height:100%;
+}
+
+.complete-btn{
+    margin: 20px auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.task-details{
+    margin: 16px auto;
+}
+
+.del{
+    width: 70px;
+    height:100%;
+}
+
+.del-btn{
+    margin: 20px auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    margin: 0;
+    margin-top: 80px;
+    background: var(--pur);
+    color: var(--white);
+}
+
+.foot{
+    width: 80%;
+    margin: auto;
+}
+
+.haha{
+    display: flex;
+}
+.one{
+    width: 20%;
+    text-align: center;
+}
+.two{
+    width: 20%;
+    text-align: center;
+}
+.three{
+    width: 50%;
+}
+.four{
+    width: 10%;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+ul{
+    padding:0;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+ul a{
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+ul a:hover{
+    opacity: 0.8;
+}
+
+.last{
+    text-align: center;
+}
+
+@media (max-width:1050px) {
+    .logo{
+        width: 70px;
+    }
+    .logotext{
+        font-size:40px;
+    }
+}
+
+@media (max-width:900px){
+    .nav{
+        height: 50px;
+    }
+    .logo{
+        width: 50px;
+    }
+    .logotext{
+        font-size:30px;
+    }
+    .first_section{
+        width:90%;
+        height: 220px;
+    }
+    .note{
+        width: 95%;
+        height: 50px;
+    }
+    .ttl{
+        width: 100%;
+        height: 50px;
+        font-size: 25px;
+    }
+    .pr{
+        font-size: 25px;
+    }
+    .s-button {
+        font-size: 16px;
+        width: 30%;
+    }
+    .display{
+        width:90%;
+    }
+    .btn-tab{
+        width: 95%;
+        height:35px;
+        margin: auto;
+        display: flex;
+    }
+    .intlbl{
+        padding: auto 10px;
+        font-size: 14px;
+    }
+    .display-task{
+        width: 95%;
+    }
+    .tsk{
+        height: 50px;
+        font-size: 20px;
+    }
+    .hii{
+        border-radius: 5px;
+    }
+    .complete{
+        width: 50px;
+    }
+    .complete-btn{
+        margin:11px auto;
+    }
+    .task-details{
+        margin: 13px auto;
+    }
+    .del{
+        width: 50px;
+    }
+    .del-btn{
+        margin: 11px auto;
+    }
+}
+
+@media (max-width:720px) {
+    .intlbl{
+        padding: auto 5px;
+        font-size: 12px;
+    }
+    .one{
+        width: 30%;
+        text-align: center;
+    }
+    .two{
+        width: 30%;
+        text-align: center;
+    }
+    .three{
+        width: 30%;
+    }
+    .four{
+        width: 10%;
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width:650px){
+    .intlbl{
+        font-size: 10px;
+    }
+    .s-button {
+        font-size: 12px;
+        width: 30%;
+    }
+    .logo{
+        width: 40px;
+    }
+    .logotext{
+        font-size:20px;
+    }
+}
+
+@media (max-width:540px){
+    .intlbl{
+        padding: 10px 5px;
+    }
+    .s-button {
+        font-size: 10px;
+        width: 30%;
+    }
+    .form-control {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .center{
+        width: 40%;
+    }
+}
+
+@media (max-width:460px) {
+    .form-control {
+        padding: 4px;
+        font-size: 10px;
+    }
+    .s-button {
+        font-size: 10px;
+        width: 40%;
+    }
+}

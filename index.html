@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="TLogo.png" type="image/jpg">
+    <title>To-Do List</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="center">
+                <span><img src="TLogo.png" alt="Logo" class="logo"></span>
+                <span class="logotext">To-Do List</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="first_section">
+        <form id="itemForm" method="POST">
+            <div class="note">
+                <input type="text" class="ttl" placeholder="Add Task" id="itemInput" required>
+            </div>
+            <div class="fwrapper">
+                <div class="form-group">
+                    <label class="pr" for="priority">Priority</label>
+                        <select name="priority" id="dropdown" class="form-control" onchange="ccolor(this.value)" required>
+                        <option disabled selected value="">Select Priority</option>
+                        <option value="red">High</option>
+                        <option value="amber">Medium</option>
+                        <option value="green">Low</option>
+                    </select>
+                </div>
+                <button class="s-button" type="submit">Add Task</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="display">
+        <div class="btn-tab" id="btn-tab">
+            <!-- <button class="intlbl">All</button>
+            <button class="intlbl">High Priority</button>
+            <button class="intlbl">Medium Priority</button>
+            <button class="intlbl">Low Priority</button> -->
+            <input type="radio" class="intrad" id="all" value="All" name="tab" checked><label for="all" class="intlbl" onclick="ShowAll()">All</label>
+            
+            <input type="radio" class="intrad" id="highpr" value="High" name="tab"><label for="highpr" class="intlbl" onclick="ShowHigh()">High Priority</label>
+            
+            <input type="radio" class="intrad" id="midpr" value="Mid" name="tab"><label for="midpr" class="intlbl" onclick="ShowMid()">Medium Priority</label>
+            
+            <input type="radio" class="intrad" id="lowpr" value="Low" name="tab"><label for="lowpr" class="intlbl" onclick="ShowLow()">Low Priority</label>
+        </div>
+
+        <div class="display-task" id="diplay-task">
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="haha">
+                <div class="one">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">for teams</a></li>
+                        <li><a href="#">Templates</a></li>
+                    </ul>
+                </div>
+                <div class="two">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help center</a></li>
+                    </ul>
+                </div>
+                <div class="three"></div>
+                <div class="four">
+                    <div class="social">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-snapchat-ghost"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="last">
+            <p class="copyright">ToDo List ©️ 2021</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
